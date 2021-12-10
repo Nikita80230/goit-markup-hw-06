@@ -403,7 +403,17 @@
                 </li>
             </ul>
             </div>
-        
+            <form action="#" class="subscribe-form">
+                <label for="" class="subscribe-label">
+                    <span class="subscribe-title">Подпишитесь на рассылку</span>
+                    <input type="email" class="subscribe-input" placeholder="E-mail">
+                    <button type="submit" class="subscribe-button">Подписаться
+                        <svg class="subscribe-icon">
+                            <use href="./images/symbol-defs.svg#icon-send" width="24" height="24"></use>
+                        </svg>
+                    </button>
+                </label>
+            </form>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -413,6 +423,46 @@
                     <use href="./images/symbol-defs.svg#icon-vector"></use>
                 </svg>
             </button>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+            <form action="#" class="modal-form">
+                <label class="modal-label" for="">
+                    <span class="modal-item">Имя</span>
+                    <input type="text" name="name" class="modal-input"/>
+                    <svg class="modal-icon">
+                        <use href="./images/symbol-defs.svg#icon-name-modal"  width="12" height="12"></use>
+                    </svg>
+                    
+                </label>
+                <label class="modal-label" for="">
+                    <span class="modal-item">Телефон</span>
+                    <input type="text" name="email" class="modal-input"/>
+                    <svg class="modal-icon">
+                        <use href="./images/symbol-defs.svg#icon-tel-modal" width="13" height="13"></use>
+                    </svg>
+                    
+                </label>
+                <label class="modal-label" for="">
+                    <span class="modal-item">Почта</span>
+                    <input type="text" name="tel" class="modal-input"/>
+                    <svg class="modal-icon">
+                        <use href="./images/symbol-defs.svg#icon-mail-modal"  width="15" height="12"></use>
+                    </svg>
+                    
+                </label>
+                <label class="modal-comment">
+                    <span class="modal-item">Комментарий</span>
+                        <textarea class="modal-comments-text" placeholder="Введите текст" name="comment" id="comment"  cols="30" rows="5"></textarea>
+                </label>
+                <label  class="modal-policy">
+                    <input class="modal-checkbox" type="checkbox" name="policy">
+                    <svg class="policy-icon">
+                        <use href="./images/symbol-defs.svg#icon-check" width="12" height="11"></use>
+                    </svg>
+                    <span class="modal-policy-text">Соглашаюсь с рассылкой и принимаю <a class="modal-policy-link" href="">Условия договора</a></span>
+                </label>
+
+                <button class="modal-button" type="submit">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
