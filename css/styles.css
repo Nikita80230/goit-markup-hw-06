@@ -717,7 +717,7 @@ input {
 .subscribe-form {
   display: block;
   box-sizing: border-box;
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .subscribe-title {
@@ -980,7 +980,7 @@ input {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  position: relative;
+  position: fixed;
 }
 
 .modal-title {
@@ -1107,34 +1107,53 @@ input {
   justify-content: center;
 
   margin-bottom: 30px;
+}
 
-  cursor: pointer;
+.modal-policy:focus {
+  border: 1px solid var(--accent-color);
+  outline: -webkit-focus-ring-color auto 0px;
 }
 
 .policy-icon {
+  cursor: pointer;
+
   position: absolute;
   top: 4px;
   left: 12px;
-  background-color: #ffffff;
+
   width: 16px;
   height: 15px;
+
   border: 2px solid var(--main-title-color);
   border-radius: 4px;
+  background-color: #ffffff;
+
+  transition: border-color 800ms;
   transition-property: background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--function);
 }
 
 .modal-checkbox {
-  cursor: pointer;
-  margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   border: 0;
   padding: 0;
-  visibility: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.policy-icon:hover,
+.modal-checkbox:focus + .policy-icon {
+  border-color: var(--accent-color);
 }
 
 .modal-policy-text {
-  margin-left: 8px;
+  margin-left: 20px;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
